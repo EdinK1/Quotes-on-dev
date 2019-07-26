@@ -2,6 +2,23 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+body {
+  background: #222222;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  img {
+    width: 300px;
+  }
+}
+
 /* All Archives Page */
 
 /* Submit a Quote Page */
