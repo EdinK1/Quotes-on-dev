@@ -13,9 +13,41 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   padding: 1rem 0;
+  position: relative;
+  // img {
+  //   width: 300px;
+}
 
-  img {
-    width: 300px;
+.preload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #333;
+  z-index: 9999;
+  display: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #0c0;
+}
+
+a:hover {
+  color: #090;
+}
+
+footer {
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  li {
+    padding-right: 0.5rem;
   }
 }
 
