@@ -21,7 +21,7 @@
 		<header>
 			<a href="<?= esc_url(get_home_url()); ?>">
 			<img src="<?= get_stylesheet_directory_uri();?> /assets/qod-logo.svg" />
-			</a>
+			</a> 
 		</header>
 
 			<div id="content" class="site-content">
