@@ -11,10 +11,8 @@
 
 	<h1>Archives</h1>
 
-	<section class="authors">
-
 	<h2>Quote Authors</h2>
-
+	<section class="authors">
         <?php
         $author_posts = new WP_Query( array(
             'post_type' => 'post',
@@ -29,20 +27,17 @@
         <?php wp_reset_postdata(); ?>
 		</section>
 
-    <section class="categories">
-	
 	<h2>Categories</h2>
-
+    <section class="categories">
 	<?php $categories = get_categories();
                 foreach($categories as $category) {
                 echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
                 }?>
     </section>
 
-    <section class="tags">
-
     <h2>Tags</h2>
-		<?php
+    <section class="tags">
+        <?php
 			$tags = get_tags();
 				foreach($tags as $tag) {
 				$tag_link = get_tag_link( $tag->term_id );
