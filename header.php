@@ -20,7 +20,7 @@
 	<div id="page" class="hfeed site container">
 		<header>
 			<a href="<?= esc_url(get_home_url()); ?>">
-			<img src="<?= get_stylesheet_directory_uri();?> /assets/qod-logo.svg" />
+			<img class="logo" src="<?= get_stylesheet_directory_uri();?> /assets/qod-logo.svg" />
 			</a> 
 		</header>
 
