@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-			<?php the_post_navigation(); ?>
+			<button type="button" class="get-quotes" id="get-quotes">Another One!</button>
 
 		<?php endwhile; // End of the loop. ?>
 
