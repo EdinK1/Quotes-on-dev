@@ -1,10 +1,10 @@
 jQuery(() => {
 
-  const goBack = () => {
+  const prevPage = () => {
     window.location = window.location;
   }
 
-  window.addEventListener('popstate', goBack);
+  window.addEventListener('popstate', prevPage);
   
   // const anotherOne = () => {
   //   setTimeout(function() {
@@ -14,8 +14,8 @@ jQuery(() => {
   // }
 
 
-jQuery('#get-quotes').on('click', function(event) {
-  event.preventDefault();
+jQuery('#get-quotes').on('click', function(e) {
+  e.preventDefault();
 
   jQuery.ajax({
     method: 'GET',
@@ -39,3 +39,31 @@ jQuery('#get-quotes').on('click', function(event) {
       });
   });
 });
+
+jQuery('#submitForm').on('submit', function(e) {
+  e.preventDefault();
+
+  let title                 = jQuery('#quote-author').val(),
+      content               = jQuery('#quote-content').val(),
+      _qod_quote_source     = jQuery('#quote-source').val(),
+      _qod_quote_source_url = jQuery('#quote-url').val();
+
+  jQuery.ajax({
+    method: 'POST',
+    url: red_vars.rest_url + 'wp/v2/posts',
+    data: {
+      title,
+      content,
+      _qod_quote_source,
+      _qod_quote_source_url,
+      status: 'pending'
+    },
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
+    }
+    }).done(function() {
+      console.log('done');
+  }).fail(function() {
+      err => console.error(err);
+  })
+  });
