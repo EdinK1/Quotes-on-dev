@@ -1,0 +1,30 @@
+.error404 {
+  .search-field {
+    border: 1px solid #0c0;
+    background: transparent;
+    border-radius: 3px;
+    color: #fff;
+
+    &:focus {
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
+  i {
+    color: #0c0;
+    font-size: 1.05rem;
+    padding-left: 0.5rem;
+
+    &:hover {
+      color: #090;
+    }
+  }
+}
+
+.search {
+  .page-title {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+  }
+}

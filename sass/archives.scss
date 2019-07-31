@@ -1,3 +1,14 @@
+.archive {
+  article {
+    border-top: 1px dashed #fff;
+    padding: 1rem 0;
+
+    &:last-of-type() {
+      border-bottom: 1px dashed #fff;
+    }
+  }
+}
+
 .page-id-226 {
   section {
     list-style: none;
