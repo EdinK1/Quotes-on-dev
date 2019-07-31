@@ -17,23 +17,17 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
 			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<?php get_template_part( 'template-parts/content' ); ?>
 
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
+				<?php endwhile; ?>	
+				<?php qod_numbered_pagination() ?>
+			<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+			
+			<?php endif; wp_reset_query(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
