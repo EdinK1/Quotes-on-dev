@@ -1,9 +1,19 @@
 .error404 {
+  .search-form {
+    display: flex;
+    align-items: center;
+  }
+
   .search-field {
     border: 1px solid #0c0;
     background: transparent;
     border-radius: 3px;
     color: #fff;
+
+    @include tablet {
+      width: 100%;
+      margin-left: 0.5rem;
+    }
 
     &:focus {
       border-color: #fff;
@@ -15,6 +25,11 @@
     color: #0c0;
     font-size: 1.05rem;
     padding-left: 0.5rem;
+
+    @include tablet {
+      margin-left: 1rem;
+      padding: 0.5rem 0 0 0.5rem;
+    }
 
     &:hover {
       color: #090;

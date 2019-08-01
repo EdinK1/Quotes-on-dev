@@ -7,6 +7,10 @@ body {
   font-size: 14px;
   color: #ffffff;
   line-height: 1.5;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .container {
@@ -40,7 +44,7 @@ a:hover {
 }
 
 .logo {
-  width: 250px;
+  width: 350px;
 }
 
 p {
@@ -54,13 +58,15 @@ h3 {
 }
 
 header {
-  margin: 3rem 0 2rem 0;
+  margin-top: 3rem;
 }
 
-.get-quotes {
+.get-quotes,
+button {
   border: 2px solid #0c0;
   background: transparent;
-  padding: 0.8rem 2.2rem;
+  padding: 0.5rem 2.2rem;
+  border-radius: 3px;
   color: #0c0;
   margin: 1rem 0;
   font-size: 1rem;
@@ -77,6 +83,13 @@ header {
 
 footer {
   margin: 4rem 0 3rem 0;
+
+  .site-info {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   ul {
     display: flex;
@@ -96,12 +109,25 @@ footer {
 
     &:last-child {
       border: none;
+
+      @include tablet {
+        border-right: 1px solid #fff;
+        margin-right: 0.5rem;
+      }
     }
   }
 
   p {
     margin: 0;
     font-size: 0.95rem;
+  }
+}
+
+.number-pagination {
+  a,
+  span {
+    padding-right: 0.3rem;
+    font-size: 1.1rem;
   }
 }
 
