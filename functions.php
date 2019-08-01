@@ -105,6 +105,8 @@ function red_scripts() {
 	} else if(is_home()) {
 	  $posts->set('posts_per_page', '1');
 	  $posts->set('orderby', 'rand');
+	} else if (is_page('archives')) {
+	  $posts->set('posts_per_page', '-1');
 	} else {
 	  $posts->set('posts_per_page', '5');
 	}
