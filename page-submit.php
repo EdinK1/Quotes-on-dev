@@ -9,8 +9,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			
+		
+		<h1>Submit a Quote</h1>
 		<form id="submitForm" style="display: flex; flex-direction: column">
 			<label for="author">
 				Author of Quote
@@ -32,7 +32,7 @@ get_header(); ?>
 				<input type="url" name="url" id="quote-url">
 			</label>
 
-			<button type="submit">Submit Quote</button>
+			<button class="submit-quote" type="submit">Submit Quote</button>
 		</form>						
 
 
