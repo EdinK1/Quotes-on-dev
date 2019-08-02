@@ -18,7 +18,7 @@
 
 	<body <?php body_class(); ?>>
 	<div id="page" class="hfeed site container">
-		<header>
+		<header class="logo-header">
 			<a href="<?= esc_url(get_home_url()); ?>">
 			<img class="logo" src="<?= get_stylesheet_directory_uri();?> /assets/qod-logo.svg" />
 			</a> 
