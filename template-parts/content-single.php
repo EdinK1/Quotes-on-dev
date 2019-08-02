@@ -8,15 +8,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
+			<main class="entry-content">			
+				<?php the_content('<p>', '</p>'); ?>
+				<?php the_title('<h3>- ', '</h3>'); ?>
+			</main><!-- .entry-content -->
 </article><!-- #post-## -->
+<button type="button" class="get-quotes" id="get-quotes">Another One!</>						
