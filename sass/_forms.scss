@@ -12,6 +12,10 @@ form {
   .submit-quote {
     width: 40%;
     padding: 0.4rem;
+
+    @include desktop {
+      width: 20%;
+    }
   }
 }
 
@@ -38,6 +42,10 @@ input[type='password'],
 input[type='search'] {
   padding: 3px;
   width: 50%;
+
+  @include desktop {
+    width: 30%;
+  }
 }
 
 textarea {

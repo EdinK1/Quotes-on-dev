@@ -3,6 +3,10 @@
     border-top: 1px dashed #fff;
     padding: 1rem 0;
 
+    @include desktop {
+      flex-direction: column;
+    }
+
     &:last-of-type {
       border-bottom: 1px dashed #fff;
     }

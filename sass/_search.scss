@@ -41,5 +41,9 @@
   .page-title {
     border-bottom: 1px solid #fff;
     padding-bottom: 1rem;
+
+    @include desktop {
+      border-bottom: 1px dashed #fff;
+    }
   }
 }
