@@ -17,8 +17,8 @@
 ## Project Snapshots
 
 <div align="center">
-    <img width="500px" height="500px" src="https://user-images.githubusercontent.com/38442554/62346086-adcee180-b4a9-11e9-84fa-dfc027754e1e.JPG">
-    <img width="500px" height="500px" src="https://user-images.githubusercontent.com/38442554/62346115-c0e1b180-b4a9-11e9-8c88-bf963202a508.JPG">
+    <img width="800px" height="500px" src="https://user-images.githubusercontent.com/38442554/62346086-adcee180-b4a9-11e9-84fa-dfc027754e1e.JPG">
+    <img width="800px" height="500px" src="https://user-images.githubusercontent.com/38442554/62346115-c0e1b180-b4a9-11e9-8c88-bf963202a508.JPG">
 </div>
 
 # My notes about the project
