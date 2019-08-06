@@ -5,13 +5,6 @@ jQuery(() => {
 
   window.addEventListener('popstate', prevPage);
 
-  // const anotherOne = () => {
-  //   setTimeout(function() {
-  //     jQuery('.preload').hide();
-  //   }, 2000);
-  //   jQuery('.preload').show();
-  // }
-
   jQuery('#get-quotes').on('click', function(e) {
     e.preventDefault();
 
@@ -41,7 +34,7 @@ jQuery(() => {
           `, 
         <a href="${response[i]._qod_quote_source_url}"> ${
             response[i]._qod_quote_source
-          }</a></h3>
+          }</a></h3ass="quote-author">
         `}
         `
             );
@@ -74,9 +67,13 @@ jQuery('#submitForm').on('submit', function(e) {
       }
     })
     .done(function() {
-      console.log('done');
+      jQuery('form')
+        .empty()
+        .append('<p class="success">Thanks for submitting your quote!</p>');
     })
     .fail(function() {
-      err => console.error(err);
+      jQuery('form').append(
+        '<p class="failure">Quote not submitted. Refresh the page and try again</p>'
+      );
     });
 });

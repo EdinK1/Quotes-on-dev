@@ -39,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## All Archives Page
 	## Submit a Quote Page
 --------------------------------------------------------------*/
+@import url(../fonts/fonts.css);
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -219,9 +220,6 @@ th {
   padding: 0; }
 
 /*--------------------------------------------------------------
-# Embedded Fonts
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
@@ -276,6 +274,74 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.error404 .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.error404 .search-field {
+  border: 1px solid #0c0;
+  background: transparent;
+  border-radius: 3px;
+  color: #fff; }
+  @media (min-width: 600px) {
+    .error404 .search-field {
+      width: 100%;
+      margin-left: 0.5rem; } }
+  .error404 .search-field:focus {
+    border-color: #fff;
+    color: #fff; }
+
+.error404 i {
+  color: #0c0;
+  font-size: 1.05rem;
+  padding-left: 0.5rem; }
+  @media (min-width: 600px) {
+    .error404 i {
+      margin-left: 1rem;
+      padding: 0.5rem 0 0 0.5rem; } }
+  .error404 i:hover {
+    color: #090; }
+
+.search .page-title {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1rem; }
+  @media (min-width: 1240px) {
+    .search .page-title {
+      border-bottom: 1px dashed #fff; } }
+
+.archive article {
+  border-top: 1px dashed #fff;
+  padding: 1rem 0; }
+  @media (min-width: 1240px) {
+    .archive article {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .archive article:last-of-type {
+    border-bottom: 1px dashed #fff; }
+
+.page-id-226 h1 {
+  margin-bottom: 1.5rem; }
+
+.page-id-226 section {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .page-id-226 section a {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1.125rem; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -309,10 +375,6 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
 ul {
   list-style: disc; }
 
@@ -343,68 +405,69 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-/* Buttons */
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.8rem 0; }
+
+form .submit-quote {
+  width: 40%;
+  padding: 0.4rem; }
+  @media (min-width: 1240px) {
+    form .submit-quote {
+      width: 20%; } }
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+textarea {
+  background: transparent;
+  border: 1px solid #0c0;
   border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-
-/* Fields */
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
+  margin-top: 0.5rem; }
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='url']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
   textarea:focus {
-    color: #111; }
+    color: #fff; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  padding: 3px; }
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'] {
+  padding: 3px;
+  width: 50%; }
+  @media (min-width: 1240px) {
+    input[type='text'],
+    input[type='email'],
+    input[type='url'],
+    input[type='password'],
+    input[type='search'] {
+      padding: 10px;
+      width: 35%; } }
 
 textarea {
-  padding-left: 3px;
+  padding: 1rem 3px 1rem 0;
   width: 100%; }
+  @media (min-width: 1240px) {
+    textarea {
+      padding: 1.5rem 0; } }
+
+.search-label .search-field {
+  width: 100%; }
+
+.fa.fa-search {
+  margin-left: 0.5rem; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -552,9 +615,6 @@ a {
 .sticky {
   display: block; }
 
-.hentry {
-  margin: 0 0 1.5rem; }
-
 .updated:not(.published) {
   display: none; }
 
@@ -565,7 +625,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5rem 0 0; }
+  margin: 1.5rem 0; }
 
 .page-links {
   clear: both;
@@ -591,5 +651,173 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+body {
+  background: #222222;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+  font-family: 'Exo', sans-serif;
+  font-weight: 300; }
+  @media (min-width: 600px) {
+    body {
+      font-size: 16px; } }
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  position: relative; }
+
+.success {
+  color: #4bb543; }
+
+.failure {
+  color: #cc0000; }
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #0c0; }
+
+a:hover {
+  color: #090; }
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem; }
+
+h3 {
+  font-weight: 300;
+  font-size: 1.25rem; }
+
+header {
+  margin-top: 3rem; }
+
+.logo-header {
+  text-align: center;
+  margin-bottom: 4rem; }
+  .logo-header .logo {
+    width: 400px; }
+    @media (min-width: 600px) {
+      .logo-header .logo {
+        width: 600px; } }
+    @media (min-width: 1240px) {
+      .logo-header .logo {
+        width: 700px; } }
+
+@media (min-width: 1240px) {
+  .quote-content {
+    font-size: 4rem;
+    width: 450px; } }
+
+@media (min-width: 1240px) {
+  .quote-author {
+    font-size: 2rem; } }
+
+.get-quotes,
+button {
+  border: 2px solid #0c0;
+  background: transparent;
+  padding: 0.5rem 2.2rem;
+  border-radius: 3px;
+  color: #0c0;
+  margin: 1rem 0;
+  font-size: 1rem; }
+  .get-quotes:hover,
+  button:hover {
+    border-color: #090;
+    color: #090; }
+
+@media (min-width: 1240px) {
+  .get-quotes {
+    display: inherit;
+    margin: 0 auto;
+    padding: 0.8rem 3rem;
+    font-size: 1.1rem; } }
+
+.search-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-top: 0.4rem; }
+
+.site-main {
+  margin: 0; }
+  @media (min-width: 600px) {
+    .site-main {
+      margin: 0 7rem 3rem 7rem;
+      position: relative; } }
+  @media (min-width: 1240px) {
+    .site-main:before, .site-main:after {
+      color: #0c0;
+      font-size: 10rem;
+      font-weight: 500;
+      position: absolute;
+      top: -50px;
+      font-family: fontAwesome; }
+    .site-main:before {
+      content: '\f10d';
+      left: -180px; }
+    .site-main:after {
+      content: '\f10e';
+      right: -165px; } }
+  @media (min-width: 1240px) {
+    .site-main .entry-content.quotes p {
+      font-size: 3rem; }
+    .site-main .entry-content.quotes h3 {
+      font-size: 1.6rem; } }
+
+footer {
+  margin: 4rem 0 3rem 0; }
+  @media (min-width: 1240px) {
+    footer {
+      margin-top: 0; } }
+  @media (min-width: 600px) {
+    footer .site-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media (min-width: 600px) and (min-width: 600px) {
+    footer .site-info {
+      margin-left: 6.3rem; } }
+  @media (min-width: 600px) and (min-width: 1240px) {
+    footer .site-info {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    padding: 0; }
+  footer li {
+    padding-right: 0.5rem;
+    border-right: 1px solid #fff;
+    line-height: 1; }
+    @media (min-width: 1240px) {
+      footer li {
+        padding-right: 1rem; } }
+    footer li:nth-child(2), footer li:last-child {
+      padding-left: 0.5rem; }
+    footer li:last-child {
+      border: none; }
+      @media (min-width: 600px) {
+        footer li:last-child {
+          border-right: 1px solid #fff;
+          margin-right: 0.5rem; } }
+  footer p {
+    margin: 0;
+    font-size: 0.95rem; }
+
+.number-pagination a,
+.number-pagination span {
+  padding-right: 0.3rem;
+  font-size: 1.1rem; }
+
 /* All Archives Page */
 /* Submit a Quote Page */

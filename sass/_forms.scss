@@ -31,7 +31,7 @@ textarea {
   margin-top: 0.5rem;
 
   &:focus {
-    color: #111;
+    color: #fff;
   }
 }
 
@@ -44,11 +44,26 @@ input[type='search'] {
   width: 50%;
 
   @include desktop {
-    width: 30%;
+    padding: 10px;
+    width: 35%;
   }
 }
 
 textarea {
-  padding-left: 3px;
+  padding: 1rem 3px 1rem 0;
   width: 100%;
+
+  @include desktop {
+    padding: 1.5rem 0;
+  }
+}
+
+.search-label {
+  .search-field {
+    width: 100%;
+  }
+}
+
+.fa.fa-search {
+  margin-left: 0.5rem;
 }
