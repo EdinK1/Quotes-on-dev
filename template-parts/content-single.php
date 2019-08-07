@@ -8,7 +8,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<main class="entry-content">			
+			<main class="entry-content quotes">			
 				<?php the_content('<p>', '</p>'); ?>
 				<?php the_title('<h3>- ', '</h3>'); ?>
 			</main><!-- .entry-content -->

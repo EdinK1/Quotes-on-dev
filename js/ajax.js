@@ -34,7 +34,7 @@ jQuery(() => {
           `, 
         <a href="${response[i]._qod_quote_source_url}"> ${
             response[i]._qod_quote_source
-          }</a></h3ass="quote-author">
+          }</a></h3>
         `}
         `
             );

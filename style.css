@@ -706,15 +706,6 @@ header {
       .logo-header .logo {
         width: 700px; } }
 
-@media (min-width: 1240px) {
-  .quote-content {
-    font-size: 4rem;
-    width: 450px; } }
-
-@media (min-width: 1240px) {
-  .quote-author {
-    font-size: 2rem; } }
-
 .get-quotes,
 button {
   border: 2px solid #0c0;
@@ -751,7 +742,7 @@ button {
   @media (min-width: 1240px) {
     .site-main:before, .site-main:after {
       color: #0c0;
-      font-size: 10rem;
+      font-size: 9rem;
       font-weight: 500;
       position: absolute;
       top: -50px;
@@ -764,9 +755,9 @@ button {
       right: -165px; } }
   @media (min-width: 1240px) {
     .site-main .entry-content.quotes p {
-      font-size: 3rem; }
+      font-size: 2.5rem; }
     .site-main .entry-content.quotes h3 {
-      font-size: 1.6rem; } }
+      font-size: 1.4rem; } }
 
 footer {
   margin: 4rem 0 3rem 0; }
