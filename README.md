@@ -2,6 +2,24 @@
 
 ## A WordPress based quote generator
 
+## Installation
+
+### 1. Download me (don't clone me!)
+
+Then add me to your `wp-content/themes` directory.
+
+### 2. Rename the `quotesondev-starter-master` directory
+
+Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+
+### 3. Install the dev dependencies
+
+Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
+
+### 4. Update the proxy in `gulpfile.js`
+
+Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+
 # Technologies used
 
 1. WordPress
@@ -16,7 +34,7 @@
 
 # My notes about the project
 
-This project was definitely easier than the last Wordpress project I had. With that said, it was a solid project and building it made me understand Wordpress and php even better. I definitely feel more confident using Wordpress and PHP now. Overall, I had a lot of fun working on this project.
+It was a solid project and building it made me understand Wordpress and php even better. I definitely feel more confident using Wordpress and PHP now. Overall, I had a lot of fun working on this project.
 
 # Project Snapshots
 
