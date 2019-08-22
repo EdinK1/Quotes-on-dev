@@ -1,4 +1,4 @@
-jQuery(() => {
+() => {
   const prevPage = () => {
     window.location = window.location;
   };
@@ -41,12 +41,12 @@ jQuery(() => {
         }
       });
   });
-});
+};
 
 jQuery('#submitForm').on('submit', function(e) {
   e.preventDefault();
 
-  let title = jQuery('#quote-author').val(),
+  const title = jQuery('#quote-author').val(),
     content = jQuery('#quote-content').val(),
     _qod_quote_source = jQuery('#quote-source').val(),
     _qod_quote_source_url = jQuery('#quote-url').val();
@@ -67,9 +67,10 @@ jQuery('#submitForm').on('submit', function(e) {
       }
     })
     .done(function() {
-      jQuery('form')
-        .empty()
-        .append('<p class="success">Thanks for submitting your quote!</p>');
+      title.val('');
+      content.val('');
+      _qod_quote_source.val('');
+      _qod_quote_source_url.val('');
     })
     .fail(function() {
       jQuery('form').append(
